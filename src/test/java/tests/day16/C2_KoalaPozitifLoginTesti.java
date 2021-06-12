@@ -1,10 +1,12 @@
 package tests.day16;
 
 import org.testng.annotations.Test;
-import pages.KoalaResortLoginPage;
+
+import pages.KoalaResortPage;
+import utilities.Driver;
 import utilities.TestBase;
 
-public class C2_KoalaPozitifLoginTesti extends TestBase {
+public class C2_KoalaPozitifLoginTesti  {
 
     /*
     1 ) Bir Class olustur : PositiveTest
@@ -19,14 +21,14 @@ public class C2_KoalaPozitifLoginTesti extends TestBase {
 
     @Test
     public void pozitifLoginTesi(){
-        driver.get("http://qa-environment.koalaresorthotels.com");
+        Driver.getDriver().get("http://qa-environment.koalaresorthotels.com");
 
-        KoalaResortLoginPage koalaResortLoginPage=new KoalaResortLoginPage(driver);
+        KoalaResortPage koalaResortPage=new KoalaResortPage();
 
-        koalaResortLoginPage.ilkLoginLinki.click();
-        koalaResortLoginPage.kullaniciAdiTextBox.sendKeys("manager");
-        koalaResortLoginPage.passwordTexBox.sendKeys("Manager1!");
-        koalaResortLoginPage.loginButonu.click();
+        koalaResortPage.ilkLoginLinki.click();
+        koalaResortPage.kullaniciAdiTextBox.sendKeys("manager");
+        koalaResortPage.passwordTexBox.sendKeys("Manager1!");
+        koalaResortPage.loginButonu.click();
 
     }
 }

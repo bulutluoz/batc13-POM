@@ -3,7 +3,7 @@ package tests.day16;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import pages.FacebookLoginPage;
+
 import utilities.TestBase;
 
 public class C1_FacebookLoginTest extends TestBase {
@@ -25,10 +25,13 @@ public class C1_FacebookLoginTest extends TestBase {
     public void pageIleTest(){
         driver.get("https://facebook.com");
 
-       FacebookLoginPage facebookLoginPage=new FacebookLoginPage(driver);
+       /*
+        FacebookLoginPage facebookLoginPage=new FacebookLoginPage(driver);
 
        facebookLoginPage.emailTextBox.sendKeys("mehmet@gmail.com");
        facebookLoginPage.passwordTexBox.sendKeys("12345");
        facebookLoginPage.loginButonu.click();
+       */
+
     }
 }

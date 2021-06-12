@@ -11,7 +11,7 @@ public class ConfigReader {
     //    bu objenin projenin her yerinden Class ismi ile cagrilabilmesi icin static yapiyoruz
     //    bu objeye Class disindan mudahale olmamasi icin private yapiyoruz (opsiyonel)
 
-    static private Properties properties;
+    private static  Properties properties;
 
     static{
         String path="src/configuration.properties";
