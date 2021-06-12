@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class KoalaResortLoginPage {
 
     // 1- Webdriver olustur
-    WebDriver driver;
+    public WebDriver driver;
 
     // 2- parametreli bir public constructor olustur
     // ve parametre olarak Webdriver driver yaz

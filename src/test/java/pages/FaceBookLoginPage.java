@@ -5,18 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
-public class FacebookLoginPage {
-
+public class FaceBookLoginPage {
     WebDriver driver;
 
-    public FacebookLoginPage(WebDriver driver){
-
-        this.driver=driver;
-
-        PageFactory.initElements(driver,this);
-
+    public FaceBookLoginPage(WebDriver driver) {
     }
+
 
     @FindBy(id="email")
     public WebElement emailTextBox;
@@ -27,3 +21,4 @@ public class FacebookLoginPage {
     @FindBy(xpath="//button[@name='login']")
     public WebElement loginButonu;
 }
+
