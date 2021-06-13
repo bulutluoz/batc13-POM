@@ -42,16 +42,16 @@ public class E2E_CreateHotel {
         Actions actions=new Actions(Driver.getDriver());
 
         actions.click(koalaResortPage.codeTextBox)
-                .sendKeys("06100")
+                .sendKeys(ConfigReader.getProperty("kr_code"))
                 .sendKeys(Keys.TAB)
-                .sendKeys("mehmet")
+                .sendKeys(ConfigReader.getProperty("kr_customer_name"))
                 .sendKeys(Keys.TAB)
-                .sendKeys("ankara")
+                .sendKeys(ConfigReader.getProperty("kr_customer_adress"))
                 .sendKeys(Keys.TAB)
-                .sendKeys("5551234567")
+                .sendKeys(ConfigReader.getProperty("kr_customer_phone"))
                 .sendKeys(Keys.PAGE_DOWN)
                 .sendKeys(Keys.TAB)
-                .sendKeys("abc@gmail.com")
+                .sendKeys(ConfigReader.getProperty("kr_customer_email"))
                 .perform();
 
         Select select=new Select(koalaResortPage.acilirMenu);
@@ -67,5 +67,7 @@ public class E2E_CreateHotel {
         Assert.assertEquals(koalaResortPage.sonucYazisiElementi.getText(),ConfigReader.getProperty("kr_otel_olusturuldu_yazisi"));
         //10. OK butonuna tıklayın.
         koalaResortPage.sonOKButonu.click();
+
+        Driver.closeDriver();
     }
 }

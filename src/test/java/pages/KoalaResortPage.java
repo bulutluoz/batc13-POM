@@ -52,4 +52,43 @@ public class KoalaResortPage {
     @FindBy(xpath = "//*[text()='OK']")
     public WebElement sonOKButonu;
 
+    @FindBy(partialLinkText = "Hotel Rooms")
+    public WebElement hotelRooms;
+
+    @FindBy(xpath = "//*[text()='Add Hotelroom ']")
+    public WebElement addHotelRoom;
+
+    @FindBy(id = "IDHotel")
+    public WebElement idHotelDropdown;
+
+    @FindBy(xpath = "//textarea[@dir='ltr']")
+    public WebElement roomTextBox;
+
+    @FindBy(linkText = "500")
+    public WebElement fiyatBesYuzButonu;
+
+    @FindBy(id = "Price")
+    public WebElement priceTextBox;
+
+    @FindBy(id = "IDGroupRoomType")
+    public WebElement roomTypeDropdown;
+
+    @FindBy(id = "MaxAdultCount")
+    public WebElement maxAdultCount;
+
+    @FindBy(id = "MaxChildCount")
+    public WebElement maxChildCount;
+
+    @FindBy(xpath = "//*[text()='HotelRoom was inserted successfully']")
+    public WebElement roomCreatedElementi;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement roomCreateSonOK;
+
+    @FindBy(partialLinkText = "Hotel Rooms")
+    public WebElement hotelRoomsButonu;
+
+    @FindBy(xpath = "(//*[text()='List Of Hotelrooms'])[2]")
+    public WebElement hotelRoomListYaziElementi;
+
 }
