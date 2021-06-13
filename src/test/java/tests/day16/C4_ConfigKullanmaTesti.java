@@ -1,7 +1,8 @@
 package tests.day16;
 
 import org.testng.annotations.Test;
-import pages.KoalaResortLoginPage;
+
+import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.TestBase;
 
@@ -28,7 +29,7 @@ public class C4_ConfigKullanmaTesti extends TestBase {
 
         driver.get(ConfigReader.getProperty("kr_url"));
 
-        KoalaResortLoginPage koalaResortLoginPage=new KoalaResortLoginPage(driver);
+        KoalaResortPage koalaResortLoginPage=new KoalaResortPage();
 
         koalaResortLoginPage.ilkLoginLinki.click();
         koalaResortLoginPage.kullaniciAdiTextBox.sendKeys(ConfigReader.getProperty("kr_valid_username"));
