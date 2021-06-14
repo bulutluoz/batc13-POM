@@ -35,10 +35,12 @@ public class E2E_CreateHotelRoom {
         koalaResortPage.loginButonu.click();
 
         // 6. Hotel Management menusunden Add Hotelroom butonuna tıklayın.
+        Thread.sleep(5000);
         koalaResortPage.hotelManagement.click();
         koalaResortPage.hotelRooms.click();
         koalaResortPage.addHotelRoom.click();
 
+        Thread.sleep(30000);
 
         // 7. Açılan sayfadaki tüm metin kutularına istediğiniz verileri girin.
 

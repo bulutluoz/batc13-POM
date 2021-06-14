@@ -54,6 +54,8 @@ public class E2E_CreateHotel {
                 .sendKeys(ConfigReader.getProperty("kr_customer_email"))
                 .perform();
 
+        Thread.sleep(5000);
+
         Select select=new Select(koalaResortPage.acilirMenu);
         select.selectByVisibleText(ConfigReader.getProperty("kr_dropdown_value"));
 

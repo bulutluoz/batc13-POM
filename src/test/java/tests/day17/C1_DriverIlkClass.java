@@ -16,5 +16,6 @@ public class C1_DriverIlkClass {
         Driver.getDriver().get("https://amazon.com");
 
         Driver.closeDriver();
+
     }
 }

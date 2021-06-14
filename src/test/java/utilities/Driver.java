@@ -11,6 +11,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
+    private Driver(){  // eger default constructor'i yazar ve acces modifer'ini private yaparsak
+                        // Class disindan bu constructor'a ulasilamaz ve dolayisiyla bu class'dan
+                        // obje uretilemez... Buna SINGLETON class denir
+
+    }
+
 
     static private WebDriver driver;
 

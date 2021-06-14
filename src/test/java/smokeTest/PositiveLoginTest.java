@@ -37,7 +37,7 @@ public class PositiveLoginTest {
 
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(),ConfigReader.getProperty("kr_basarili_giris_url"));
 
-        Driver.closeDriver();
+        //Driver.closeDriver();
 
 
     }
