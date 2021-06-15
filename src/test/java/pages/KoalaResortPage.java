@@ -149,13 +149,28 @@ public class KoalaResortPage {
 
     }
 
-    public WebElement dataBul(int satirNo, int sutunNo){
+    public String dataStringBul(int satirNo, int sutunNo){
         // ornek : her 3. satirdaki 2.sutunu bulmak istersek //tbody//tr[3]//td[2] yazabiliriz
         String dataPath="//tbody//tr["+ satirNo +"]//td["+sutunNo+"]";
-        System.out.println(dataPath);
 
-        System.out.println("istediginiz data : " + Driver.getDriver().findElement(By.xpath(dataPath)).getText());
+        return Driver.getDriver().findElement(By.xpath(dataPath)).getText();
+    }
+
+    public WebElement dataWebelementiBul(int satirNo, int sutunNo){
+        // ornek : her 3. satirdaki 2.sutunu bulmak istersek //tbody//tr[3]//td[2] yazabiliriz
+        String dataPath="//tbody//tr["+ satirNo +"]//td["+sutunNo+"]";
+
         return Driver.getDriver().findElement(By.xpath(dataPath));
+    }
+
+    public void istenenHucreyiYazdir(int satirNo, int sutunNo){
+
+        // ornek : 5.satir 4 sutunu yazdir  //tbody//tr[   5   ]//td[   4    ]
+        String hucreXPath= "//tbody//tr["+ satirNo +"]//td["+ sutunNo + "]";
+
+        WebElement istenenDataElementi= Driver.getDriver().findElement(By.xpath(hucreXPath));
+
+        System.out.println(istenenDataElementi.getText());
     }
 
 

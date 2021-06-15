@@ -17,7 +17,7 @@ public class C3_WebTableHomework2 {
         int istenenSatir=Integer.parseInt(ConfigReader.getProperty("webTableRowNo"));
         int istenenSutun=Integer.parseInt(ConfigReader.getProperty("webTableColumnNo"));
 
-        String istenenDataOkunan=koalaResortPage.dataBul(istenenSatir,istenenSutun).getText();
+        String istenenDataOkunan=koalaResortPage.dataStringBul(istenenSatir,istenenSutun);
         Assert.assertEquals(ConfigReader.getProperty("webTableExpectedData"),istenenDataOkunan);
 
         Driver.closeDriver();
