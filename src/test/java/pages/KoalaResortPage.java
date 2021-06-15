@@ -149,11 +149,13 @@ public class KoalaResortPage {
 
     }
 
-    public void printData(int satirNo, int sutunNo){
+    public WebElement dataBul(int satirNo, int sutunNo){
         // ornek : her 3. satirdaki 2.sutunu bulmak istersek //tbody//tr[3]//td[2] yazabiliriz
-        String dataPath="//tbody//tr["+ satirNo +"]//"+sutunNo+"]";
+        String dataPath="//tbody//tr["+ satirNo +"]//td["+sutunNo+"]";
+        System.out.println(dataPath);
 
-        System.out.println("istediginiz data : " + Driver.getDriver().findElement(By.xpath(dataPath)));
+        System.out.println("istediginiz data : " + Driver.getDriver().findElement(By.xpath(dataPath)).getText());
+        return Driver.getDriver().findElement(By.xpath(dataPath));
     }
 
 
