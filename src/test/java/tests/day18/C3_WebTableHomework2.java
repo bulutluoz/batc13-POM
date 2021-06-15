@@ -11,6 +11,7 @@ public class C3_WebTableHomework2 {
     @Test
     public void printDataTest(){
 
+
         KoalaResortPage koalaResortPage=new KoalaResortPage();
 
         koalaResortPage.koalaResortLogin();
@@ -21,6 +22,8 @@ public class C3_WebTableHomework2 {
         Assert.assertEquals(ConfigReader.getProperty("webTableExpectedData"),istenenDataOkunan);
 
         Driver.closeDriver();
+
+
 
     }
 }

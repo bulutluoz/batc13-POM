@@ -20,9 +20,9 @@ public class C4_WebTableDemoqa {
         //  2. Headers da bulunan department isimlerini yazdirin
         DemoqaPage demoqaPage=new DemoqaPage();
 
-        for (WebElement w: demoqaPage.headerList
+        for (WebElement each: demoqaPage.headerList
         ) {
-            System.out.println(w.getText());
+            System.out.println(each.getText());
         }
 
         //  3.sutunun basligini yazdirin
@@ -56,7 +56,7 @@ public class C4_WebTableDemoqa {
 
         //  9. Tabloda "First Name" i Kierra olan kisinin Salary'sini yazdirin
 
-        demoqaPage.istenenKisininMaasiniYazdir("Kierra");
+        demoqaPage.istenenKisininMaasiniYazdir(ConfigReader.getProperty("demoqa_maasi_istenen_kisi"));
 
         //10. Page sayfasinda bir method olusturun, Test sayfasindan satir ve sutun
         //    sayisini girdigimde bana datayi yazdirsin
