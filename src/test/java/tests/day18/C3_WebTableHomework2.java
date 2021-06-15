@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
+import utilities.Driver;
 
 public class C3_WebTableHomework2 {
 
@@ -19,6 +20,7 @@ public class C3_WebTableHomework2 {
         String istenenDataOkunan=koalaResortPage.dataBul(istenenSatir,istenenSutun).getText();
         Assert.assertEquals(ConfigReader.getProperty("webTableExpectedData"),istenenDataOkunan);
 
+        Driver.closeDriver();
 
     }
 }
