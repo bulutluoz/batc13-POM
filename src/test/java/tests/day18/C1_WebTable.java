@@ -93,6 +93,7 @@ public class C1_WebTable {
         System.out.println("=================");
         koalaResortPage.istenenSatiriYazdir(7);
 
+        Driver.closeDriver();
     }
 
 }

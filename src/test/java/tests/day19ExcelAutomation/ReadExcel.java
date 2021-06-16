@@ -7,6 +7,8 @@ import utilities.ConfigReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ReadExcel {
 
@@ -70,8 +72,57 @@ public class ReadExcel {
         // excel sayfa1'deki satir sayisini bulun
 
         System.out.println(workbook.getSheet(ConfigReader.getProperty("excel_sayfa_ismi")).getLastRowNum());
-
+        // getLastRowNum() son satirin index'ini verir ,  satir sayisini bulmak istersek sonuca 1 ekleriz
         System.out.println(workbook.getSheet(ConfigReader.getProperty("excel_sayfa_ismi")).getPhysicalNumberOfRows());
+        // getPhysicalNumberOfRows() ise aktif olarak bilgi iceren satir sayisini verir
+        // 0'dan baslamaz, sayma sayilarini kullanir
+
+
+        // Excelin 2.sayfasinda bazi satirlari kullanip, bazilarini kullanmadik
+        // bu durumda sonSatirIndex'i ve fizikiKullanilanSatirSayisi degerlerini bulalim
+
+        System.out.println("2.sayfa son satir index i : " + workbook.getSheetAt(1).getLastRowNum());
+        System.out.println("2.sayfa fiziki kullanilan satir sayisi : " + workbook.getSheetAt(1).getPhysicalNumberOfRows());
+
+
+
+        // excel'de bulunan tum ulkelerin turkce isimlerini yazdirin
+        // yani her satirdaki 2.index'deki bilgi isteniyor
+
+
+        int sonSatirIndexi=workbook.getSheetAt(0).getLastRowNum();
+
+        for (int index=1 ; index<=sonSatirIndexi ; index++){
+
+            String baskentIsmi= workbook.getSheetAt(0).getRow(index).getCell(3).toString();
+
+            System.out.println((index+1)+ ". satirdaki baskent ismi " + baskentIsmi);
+        }
+
+        // Excel'deki tum datalari Class'imiza almak istersek
+        // Bunun icin datalari bir java objesine eklememiz gerekir
+
+        // boyle bir bilgiyi depolayabileyecegimiz java objesi map olabilir
+        // Map'e depolamak icin sutunlardan birini key
+        // digerlerini virgulle birbirine ekleyerek olusturacagim String'i ise value yapabilirim
+
+        Map<String,String> ulkelerMap = new HashMap<>();
+        String key="";
+        String value="";
+
+        for (int index=1 ; index<=sonSatirIndexi ; index++){
+
+            key=workbook.getSheetAt(0).getRow(index).getCell(0).toString();
+
+            value= workbook.getSheetAt(0).getRow(index).getCell(1).toString() + ", "+
+                    workbook.getSheetAt(0).getRow(index).getCell(2).toString() + ", "+
+                    workbook.getSheetAt(0).getRow(index).getCell(3).toString();
+
+            ulkelerMap.put(key,value);
+        }
+
+        System.out.println(ulkelerMap);
+
 
 
 
