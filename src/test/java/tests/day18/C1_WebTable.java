@@ -21,7 +21,7 @@ public class C1_WebTable {
 
      */
 
-    @Test
+    @Test  (groups = "mini_regression")
     public void table(){
         KoalaResortPage koalaResortPage=new KoalaResortPage();
         koalaResortPage.koalaResortLogin();
@@ -57,7 +57,7 @@ public class C1_WebTable {
 
     }
 
-    @Test
+    @Test (groups = "smoke")
     public void getRows(){
         //  ● printRows() metodu oluşturun //tr
         //                ○ table body’sinde bulunan toplam satir(row) sayısını bulun.

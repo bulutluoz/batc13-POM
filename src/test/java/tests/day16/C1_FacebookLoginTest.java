@@ -10,7 +10,7 @@ import utilities.TestBase;
 
 public class C1_FacebookLoginTest extends TestBase {
 
-    @Test
+    @Test (groups = {"mini_regression" , "smoke"})
     public void gelenekselTest(){
         driver.get("https://facebook.com");
 
@@ -23,7 +23,7 @@ public class C1_FacebookLoginTest extends TestBase {
         driver.findElement(By.xpath("//button[@name='login']")).click();
     }
 
-    @Test
+    @Test (groups = "mini_regression")
     public void pageIleTest(){
         driver.get("https://facebook.com");
 

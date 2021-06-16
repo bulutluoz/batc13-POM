@@ -35,5 +35,6 @@ public class C1_WebTableTekrar1 {
 
         Assert.assertEquals(actualHucreYazisi,ConfigReader.getProperty("webTableExpectedData"));
 
+        Driver.closeDriver();
     }
 }

@@ -123,12 +123,8 @@ public class ReadExcel {
 
         System.out.println(ulkelerMap);
 
-
-
-
-
-
-
+        fileInputStream.close();
+        workbook.close();
 
     }
 

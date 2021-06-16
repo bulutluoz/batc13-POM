@@ -19,5 +19,7 @@ public class C3_KoalaNegatifTest  {
         koalaResortPage.passwordTexBox.sendKeys("manager1!");
         koalaResortPage.loginButonu.click();
 
+        Driver.closeDriver();
+
     }
 }
