@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="mini regression">
+    <test name="mini regression">
+        <!-- burada yazdigimiz test ile test method'lari farkli seylerdir.
+               Test : bir veya daha fazla class/package/method/group dan olusan
+               bir butundur. -->
+
+        <packages>
+            <package name="tests.day17"></package>
+        </packages>
+
+        <classes>
+            <class name="smokeTest.NegativeLoginTest"></class>
+
+            <class name="tests.day19ExcelAutomation.ReadExcel">
+                <methods>
+                    <include name="readExcel2"></include>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+</suite>
